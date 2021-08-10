@@ -17,7 +17,7 @@ const correctLetters = []
 const wrongLetters = []
 
 function App() {
-  const [playable, setplayable] = useState(true)
+  const [playable, setPlayable] = useState(true)
   const [correctLetters, setcorrectLetters] = useState([])
   const [wrongLetters, setwrongLetters] = useState([])
   const [showNotification, setShowNotification] = useState(false)
@@ -56,7 +56,12 @@ function App() {
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup />
+      <Popup
+        correctLetters={correctLetters}
+        wrongLetters={wrongLetters}
+        selectedWord={selectedWord}
+        setPlayable={setPlayable}
+      />
       <Notification showNotification={showNotification} />
     </>
   )
