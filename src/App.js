@@ -1,7 +1,15 @@
 import './App.css'
-
+import Header from './components/Header'
+import Figure from './components/Figure'
 function App() {
-  return <div className='App'></div>
+  return (
+    <>
+      <Header />
+      <div className='game-container'>
+        <Figure />
+      </div>
+    </>
+  )
 }
 
 export default App
